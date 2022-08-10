@@ -1,0 +1,15 @@
+{
+  "name": "meus-exercicios-js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "testes.js",
+  "scripts": {
+    "start": "node testes.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
