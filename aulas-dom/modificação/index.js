@@ -13,3 +13,10 @@ paiDoElementoP.replaceChild(umSpan, elementoP) // o p foi substituído pelo o no
 
 let linkYT = document.querySelector("a"); // está adicionando o a na variavel
 linkYT.setAttribute("href","https://www.youtube.com/watch?v=srhVCrcx2uw/"); // está modificando o link do href
+
+
+// modificando o css
+
+    let primeiroh1 = document.getElementById("primeiroh1"); // pegando o h1
+    primeiroh1.style.color = 'green'; // mudando a cor do g1
+    primeiroh1.style.background = 'black'; // mudando o fundo do h1
