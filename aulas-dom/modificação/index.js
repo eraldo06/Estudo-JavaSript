@@ -20,3 +20,9 @@ linkYT.setAttribute("href","https://www.youtube.com/watch?v=srhVCrcx2uw/"); // e
     let primeiroh1 = document.getElementById("primeiroh1"); // pegando o h1
     primeiroh1.style.color = 'green'; // mudando a cor do g1
     primeiroh1.style.background = 'black'; // mudando o fundo do h1
+
+
+// Mudando a cor de um intem dentro de uma lista
+
+    let elementoLi = document.querySelectorAll('li');
+    elementoLi[3].style.color = 'red';
