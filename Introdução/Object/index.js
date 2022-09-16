@@ -9,4 +9,8 @@ pessoa = {
     }
 }
 
+// console todo o objeto
 console.log(pessoa);
+
+// Pegar só uma atributo do objeto
+console.log(pessoa.nome);
