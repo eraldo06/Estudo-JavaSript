@@ -18,6 +18,7 @@ async function getAllPosts(){
     loadingElement.classList.add("hide");
 
     data.map((post)=>{
+        
         const div = document.createElement("div");
         const title = document.createElement("h2");
         const body = document.createElement("p");
@@ -28,10 +29,12 @@ async function getAllPosts(){
         link.innerText = "ler";
         link.setAttribute("href", `/post.html?id=${post.id}`)
 
+        // as informação no html vai parecer nessa ordem
         div.appendChild(title);
         div.appendChild(body);
         div.appendChild(link);
 
+        // O id postsContainer vai receber o const div para mostrar no html
         postsContainer.appendChild(div);
     });
 }
