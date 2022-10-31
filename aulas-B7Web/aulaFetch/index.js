@@ -11,7 +11,7 @@ function loadPosts(){
 
         // colocando o resulto no HTML
         .then(function(resul){
-            document.getElementById('posts').innerHTML = resul.length+ " posts";
+            montarBlog(resul);
         })
 
         // tratramento de erro
@@ -19,5 +19,18 @@ function loadPosts(){
             console.log("Deu erro");
             document.getElementById('posts').innerHTML = "deu erro"    
         })
+
+
+    function montarBlog(lista){
+        let html = "";
+
+        for(let i in lista){
+            html += "<h3>"+lista[i].title+"</h3>";
+            html += "<p>"+lista[i].body+"<p/>";
+            html += "<hr/>"
+        }
+        document.getElementById('posts').innerHTML = html
+
+    }
     }
    
