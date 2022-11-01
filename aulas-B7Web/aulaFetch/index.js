@@ -1,23 +1,12 @@
 
-function loadPosts(){
+async function loadPosts(){
     document.getElementById('posts').innerHTML = "Carregando"    
 
     // pegando url e transformando em json
-    fetch('https://jsonplaceholder.typicode.com/posts')
-        .then(function(resul){
-            return resul.json()
-        })
+    let req = await fetch('https://jsonplaceholder.typicode.com/posts')
+    let json = await req.json();
+    montarBlog(json);
 
-        // colocando o resulto no HTML
-        .then(function(resul){
-            montarBlog(resul);
-        })
-
-        // tratramento de erro
-        .catch(function(errorr){
-            console.log("Deu erro");
-            document.getElementById('posts').innerHTML = "deu erro"    
-        })
 
     // colocando o resulto no HTML
     function montarBlog(lista){
@@ -35,4 +24,7 @@ function loadPosts(){
         document.getElementById('posts').innerHTML = html
     }
     }
-   
+
+
+
+ 
