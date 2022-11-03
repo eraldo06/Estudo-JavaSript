@@ -3,8 +3,9 @@ function mostrar(){
 
     console.log(imagem);
 
-    let tipo = document.createComment('img');
+    let tipo = document.createElement('img');
     tipo.src = URL.createObjectURL(imagem);
+    tipo.width = 200
 
     document.getElementById("area").append(tipo);
 }
